@@ -1,0 +1,206 @@
+
+.sentimentChart {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .sentimentChart h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Input and Button Section */
+  .sentimentChart__videoUrlInput {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+    margin-left: 25%;
+    width: 50%;
+  }
+  
+  .sentimentChart__videoUrlInput input {
+    flex: 1 1 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .sentimentChart__videoUrlInput button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .sentimentChart__videoUrlInput button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Loading State */
+  .sentimentChart__loading {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .sentimentChart__loading p {
+    margin-top: 10px;
+  }
+  
+  /* Summary Section */
+  .sentimentChart__summary {
+    margin: 20px 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    text-align: justify;
+    line-height: 1.5rem;
+    letter-spacing: 0.2px;
+  }
+  
+  /* Line Chart */
+  .sentimentChart__linechart {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    line-height: 1.5rem;
+
+  }
+  
+  .sentimentChart__lineAnalysis {
+    margin-top: 20px;
+    text-align: justify;
+  }
+  
+  .sentimentChart__section {
+    margin-bottom: 15px;
+  }
+  
+  .sentimentChart__sectionTitle {
+    font-weight: bold;
+  }
+  
+  .sentimentChart__bulletPoints {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .sentimentChart__bulletPoint {
+    margin-bottom: 5px;
+  }
+  
+  /* Pie Chart */
+  .sentimentChart__piechart {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .sentimentChart__piechart-chart-wrapper {
+    width: 40%; /* Reduce to half the size */
+    margin: 0 auto; /* Center the chart */
+  }
+  
+  .sentimentChart__piechart-chart-wrapper canvas {
+    width: 100%; /* Make the canvas adapt to the wrapper size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+
+  
+  .sentimentChart__pieAnalysis {
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 1.5rem;
+    background-color: #f9f9f9;
+
+
+  }
+  
+  /* AI Analysis Section */
+  .sentimentChart__aiAnalysis {
+    margin: 20px 0;
+    text-align: justify;
+    line-height: 1.5rem;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+
+
+  }
+  
+  .sentimentChart__aiAnalysis-section {
+    margin-bottom: 20px;
+
+  }
+  
+  .sentimentChart__aiAnalysis-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  .sentimentChart__aiAnalysis-subsection {
+    margin-left: 20px;
+  }
+  
+  .sentimentChart__aiAnalysis-subsection h3 {
+    margin-bottom: 5px;
+    color: #726f6f;
+  }
+  
+  .sentimentChart__aiAnalysis-subsection ul {
+    padding-left: 20px;
+    list-style-type: circle;
+    color: #848080;
+
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sentimentChart__videoUrlInput {
+      flex-direction: column;
+    }
+  
+    .sentimentChart__videoUrlInput input,
+    .sentimentChart__videoUrlInput button {
+      flex: none;
+      width: 100%;
+    }
+  
+    .sentimentChart__linechart,
+    .sentimentChart__piechart {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sentimentChart h1 {
+      font-size: 1.5rem;
+    }
+  
+    .sentimentChart__videoUrlInput {
+      gap: 5px;
+    }
+  
+    .sentimentChart__videoUrlInput input {
+      padding: 8px;
+    }
+  
+    .sentimentChart__videoUrlInput button {
+      padding: 8px 15px;
+    }
+  }
+  

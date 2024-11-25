@@ -1,0 +1,27 @@
+{
+  "name": "assemblyai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assemblyai": "^4.8.0",
+    "axios": "^1.7.7",
+    "child_process": "^1.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "url": "^0.11.4",
+    "util": "^0.12.5"
+  },
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
