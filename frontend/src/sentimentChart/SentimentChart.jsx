@@ -31,6 +31,7 @@ const SentimentChart = () => {
     setPieAnalysis(null);
 
     try {
+      console.log("react app url for backend",process.env.REACT_APP_API_URL )
       const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
       const response = await axios.post(`${apiUrl}/transcribe`, { videoUrl });
       const { summaryData, sentimentData, aiAnalysisData, lineChartAnalysis, pieChartAnalysis } = response.data;
