@@ -32,8 +32,7 @@ const SentimentChart = () => {
 
     try {
       console.log("react app url for backend",process.env.REACT_APP_API_URL )
-      const apiUrl = 'https://assemblyaibackend.vercel.app';
-      const response = await axios.post(`${apiUrl}/transcribe`, { videoUrl });
+      const response = await axios.post(`https://assemblyaibackend.vercel.app/transcribe`, { videoUrl });
       const { summaryData, sentimentData, aiAnalysisData, lineChartAnalysis, pieChartAnalysis } = response.data;
 
       if (summaryData) setSummary(summaryData);
