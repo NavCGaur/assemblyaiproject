@@ -4,7 +4,6 @@ import cors from 'cors';
 import { transcribeVideo } from './transcribeVideo.js';
 
 const PORT = process.env.PORT || 5000;
-const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000'; // Default to localhost in development
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 
