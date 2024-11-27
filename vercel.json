@@ -3,27 +3,29 @@
   "builds": [
     {
       "src": "backend/server.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "installCommand": "npm --prefix backend install"
+      }
     },
     {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build"
+        "installCommand": "cd frontend && npm install",
+        "buildCommand": "cd frontend && chmod +x node_modules/.bin/react-scripts && npm run build",
+        "distDir": "frontend/build"
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/server.js"
-    },
-    {
-      "handle": "filesystem"
+      "dest": "backend/server.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/frontend/index.html"
+      "dest": "/frontend/build/$1"
     }
   ]
 }
