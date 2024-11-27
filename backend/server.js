@@ -13,14 +13,17 @@ const app = express();
 
 
 if (isDevelopment) {
-  // Only use CORS in development
+  // Only use CORS in development for localhost
   app.use(cors({
-    origin: process.env.REACT_APP_FRONTEND_URL || 'http://localhost:3000';,
+    origin: process.env.REACT_APP_FRONTEND_URL || 'http://localhost:3000',
   }));
 } else {
-  // In production, you can either remove CORS or use a simpler configuration
-  app.use(cors());
+  // Use Vercel domain in production
+  app.use(cors({
+    origin: 'https://assemblyaiproject.vercel.app', // Update with your actual domain
+  }));
 }
+
 
 
 app.use(express.json());
