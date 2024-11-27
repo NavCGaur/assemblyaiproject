@@ -4,7 +4,6 @@ import cors from 'cors';
 import { transcribeVideo } from './transcribeVideo.js';
 
 const PORT = process.env.PORT || 5000;
-const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000'; // Default to localhost in development
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 
@@ -16,7 +15,7 @@ const app = express();
 if (isDevelopment) {
   // Only use CORS in development
   app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: process.env.REACT_APP_FRONTEND_URL || 'http://localhost:3000';,
   }));
 } else {
   // In production, you can either remove CORS or use a simpler configuration
